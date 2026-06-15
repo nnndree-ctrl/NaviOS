@@ -1,6 +1,6 @@
 # NaviOS
 
-my Hyprland setup, themed around the Navi computer from Serial Experiments Lain. GTK3/WebKit2 homescreen, radial quickmenu, overlay HUDs for clock/volume/brightness, a music widget, workspace glitch effects, and a Copland OS style boot splash.
+my Hyprland setup, themed around Navi from Serial Experiments Lain
 
 ## install
 
