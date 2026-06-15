@@ -1,9 +1,4 @@
 #!/usr/bin/env python3
-"""
-Copland OS boot splash v2 - more layered/busy, closer to Navi aesthetic.
-Dark navy bg, perspective grid floor, multiple wireframe orbit rings,
-particle field, flickering text fragments, glitch bars, scanlines.
-"""
 
 import gi
 gi.require_version("Gtk", "3.0")

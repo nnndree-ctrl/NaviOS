@@ -1,9 +1,4 @@
 #!/usr/bin/env python3
-"""
-Navi - orbital launcher overlay, Lain-inspired
-Fullscreen transparent overlay with orbiting nodes you click to launch apps.
-Press Escape or click background to dismiss without launching.
-"""
 
 import gi
 gi.require_version("Gtk", "3.0")
