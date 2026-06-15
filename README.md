@@ -5,7 +5,7 @@ my Hyprland setup, themed around Navi from Serial Experiments Lain
 ## install
 
 ```sh
-git clone https://github.com/nnndree-ctrl/NaviOS.git
+git clone https://github.com/peroxidemix/NaviOS.git
 cd NaviOS
 ./install.sh
 ```
