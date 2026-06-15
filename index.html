@@ -623,7 +623,6 @@
       const toCenterX = screenCenterX - pieceCenterX;
       const toCenterY = screenCenterY - pieceCenterY;
 
-      // Step 1: progressively remove pieces from the live node, one per step
       node.style.transition = 'none';
       node.style.animation = 'none';
       pillCanvas.style.transition = 'none';
@@ -631,11 +630,10 @@
       flashCanvas.style.animation = 'none';
       flashCanvas.style.opacity = '0';
 
-      // After each step, the node shows only the REMAINING (not-yet-broken-off) area
       const remainingShapes = [
-        'polygon(50% 50%, 100% 0%, 100% 100%, 0% 100%, 0% 0%)', // top piece removed
-        'polygon(50% 50%, 0% 0%, 0% 100%, 0% 100%)',             // top+right removed -> left+bottom remain
-        'polygon(0% 0%, 0% 0%, 0% 0%)'                           // everything removed
+        'polygon(50% 50%, 100% 0%, 100% 100%, 0% 100%, 0% 0%)',
+        'polygon(50% 50%, 0% 0%, 0% 100%, 0% 100%)',            
+        'polygon(0% 0%, 0% 0%, 0% 0%)'                          
       ];
 
       const stepDelay = 180;
@@ -652,7 +650,6 @@
         node.style.visibility = 'hidden';
       }, remainingShapes.length * stepDelay);
 
-      // Step 2: spawn shards staggered to match cutouts
       clipShapes.forEach((clip, i) => {
         setTimeout(() => {
         const shard = document.createElement('div');
@@ -697,7 +694,6 @@
         }, i * 180);
       });
 
-      // Step 3: restore the node after shards are done
       setTimeout(() => {
         node.style.transition = 'none';
         node.style.opacity = '1';
